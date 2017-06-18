@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"         android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MainActivity"
+    android:id="@+id/hola">
+
+    <TextView android:text="Logeo" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:id="@+id/tV1"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etUser"
+        android:singleLine="true"
+        android:ems="10"
+        android:layout_above="@+id/etPass"
+        android:imeOptions="actionNext"
+        android:imeActionId="@id/etPass"
+        android:layout_gravity="center_horizontal"
+        style="@style/txtInput"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/txtInput"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"
+        android:imeOptions="actionSend"
+        android:id="@+id/etPass" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        style="@style/btnAdox"
+        android:id="@+id/btnEntrar"
+        android:elevation="8dp"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

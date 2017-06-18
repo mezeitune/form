@@ -1,0 +1,10 @@
+syntax: glob
+*.class
+.gradle
+app/build/*
+.idea
+.hgignore~
+local.properties
+*.orig
+build
+adoxLib/build

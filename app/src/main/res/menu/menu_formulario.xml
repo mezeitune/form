@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".FormularioActivity">
+
+    <item android:id="@+id/item1" android:title="Deslogearse"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/item2"
+        android:icon="@android:drawable/stat_notify_sync"
+        android:title="Actualizar BD"
+        android:orderInCategory="100" app:showAsAction="always" />
+    <item android:id="@+id/item3" android:title="Subir contenidos pendientes"
+        android:icon="@android:drawable/arrow_up_float"
+        android:orderInCategory="100" app:showAsAction="always" />
+    <item android:id="@+id/item4" android:title="Salir"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

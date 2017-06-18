@@ -1,0 +1,62 @@
+Interface(implement interface): vos le estableces por defecto las funciones que tiene que tener si o si esa clase , seria como su esqueleto.
+
+Singleton: Es un objeto, que solo puede ser instanciada una vez (siempre se instancia en la misma clase). Se ve claramente cuando todas las funciones son estaticas y su constructor es privado y tiene una funcion que se llama getInstance , que seria donde instancia nuestro objeto por unica vez.
+
+Fragment: Son cada Tab
+-----------------------------------------------------------
+Http: Es un conjunto de clases , que envian un request a un servidor , recibiendo una respuesta ya sea en json o lo que sea para que sea mas comodo . (tiene una interface que es onResponse: osea que tiene que tener esa funcion si o si en todos los lugares que implementes http , ya que cuando reciba la respuesta ahi le vas a decir lo que tiene que hacer , se ve claramente en el Main Activity cuando se logea , y va a onResponse y le dice que vaya a process_login para que termine el logeo).
+
+Book:Vendria a ser la estructura de una tabla(id, nombre , etc)
+BookTable:Vendria a tener las funciones de las tablas
+DatabaseOpenHelper:Es lo que maneja toda la bd.
+
+Como manejarse con la base de datos: Ejemplo de insertar:
+                        Primero creo el objeto book , que es el que vamos a insertar Book book = new Book(null, nomET.getText().toString(), dirET.getText().toString());
+
+Despues como nuestro book table ya es un singleton , no hay que instanciarlo , y ya usamos una de sus funciones , que es addbook, pasandole como instnacia el book añadido , y la BD
+                        BookTable.addBook(book, db);
+
+Antes yo lo que hacia era usar las funciones de la bd desde la instnacia de db directamente , que tambien tiene funciones ya 
+
+-------------------------------
+Manejo de listeners(como en book table)(es para agregar escuchadores que esten a la espera de un suceso , y entocnes puedan ser notificados , para hacer la accion requerida):
+
+Primero creamos un array con los escuchadores (por ahora vacia): public static ArrayList<TableDataChangeListener> listeners= new ArrayList<>();
+ese Table data change listeners , es una interfaz , para decirle que siempre lleve esa funcion que esta definida ahi dentro
+
+Agregamos escuchadores: public static void addListener(TableDataChangeListener listener) {
+		listeners.add(listener);
+	}
+
+El parametro ese se le pasa , para saber si realmente tiene implementada la interfaz en la clase que estamos añadiendo este escuchador: BookTable.addListener(this);
+
+Notificar a los escuchadores que paso algo:
+	public static void notifyListeners(){
+		for(int i=0;i<listeners.size();i++){
+			listeners.get(i).onDataChange();
+		}
+	}
+
+Le decimos que recorra todos los escuchadores , y les mande la funcion que tenemos en la interfaz , para q se ejecute.
+Esta funcion se pondria por ejemplo en addBook: que es una funcion importante de BookTable: notifyListeners();
+
+
+Y en el onDataChange le decimos exactamente que es lo que va a cambiar: onDataChange() .
+Obio que cada clase que tenga estos escuchadores , debe tener esto-: implements TableDataChangeListener
+
+------------------------------------------------------------
+Util: irian constantes , y funciones utiles , tales como logout definidas en toda la app
+
+Secure Activity: Agustin la usa mucho para el logeo , saber de donde viene , y hacer mas segura la app
+
+Model: vendrian a ser modelos de cosas, tales como interfaces , tablas , etc
+
+----------------------------------------------------------
+
+En el manifest , definio Formulario Activity , como la actibity principal , para ver si esta logeado , y si no lo esta que vaya a la main actibity:
+<activity android:name=".FormularioActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>

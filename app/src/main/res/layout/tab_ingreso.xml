@@ -1,0 +1,191 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/tab1"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo Equipo:"
+            android:id="@+id/textView7" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnTipoEquipo"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero Serie:" />
+
+        <EditText
+            android:id="@+id/numeroSerie"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeActionId="@+id/autoCompleteTextView"
+            />
+        <TextView
+            android:id="@+id/textViewnsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero Serie Absorbedor:"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/numeroSerieAbsorvedor"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeActionId="@+id/autoCompleteTextView"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/textViewnsr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero Serie Respirador:"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/numeroSerieRespirador"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeActionId="@+id/autoCompleteTextView"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instituciones:" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeActionId="@+id/emailCliente"
+            android:ems="10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Responsable:"
+            android:id="@+id/textView2" />
+
+        <EditText
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeActionId="@+id/nomYApe"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/emailCliente" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre y Apellido:"
+            android:id="@+id/textView5" />
+
+        <EditText
+            android:singleLine="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nomYApe"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeActionId="@+id/area"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Area:"
+            android:id="@+id/textView3" />
+
+        <EditText
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/area"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:imeActionId="@+id/spnTipoContrato"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contrato"
+            android:id="@+id/textView6" />
+
+        <Spinner
+            android:id="@+id/spnTipoContrato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/txtInput"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/contratos_array"
+            android:prompt="@string/contratos_disponibles" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            style="@style/btnAdox"
+            android:id="@+id/sigBUT"
+            android:elevation="8dp"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+</ScrollView>

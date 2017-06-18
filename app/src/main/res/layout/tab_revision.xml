@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nomYApe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/numeroSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+        <TextView
+            android:id="@+id/numeroSerieAbsorvedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/numeroSerieRespirador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/nombreInstitucion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/emailCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tipoEquipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/contrato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/firmar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Firmar"
+            style="@style/btnAdox"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="8dp"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!--<TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="New Text" />-->
+
+        <Button
+            android:id="@+id/terminar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Terminar"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/btnAdox"
+            android:elevation="8dp"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
